@@ -1,0 +1,131 @@
+:root {
+  --main-color: #c77dff;
+  --gray-color: #888;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url('../assets/font/Inter-Light.ttf');
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: 'Inter';
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.dictionary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+}
+
+.dictionary .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 50%;
+  padding: 3rem;
+  border-radius: 12px;
+  margin: 0 24px;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding: 2rem 0;
+}
+
+.search .search__input {
+  padding: 18px;
+  width: 75%;
+  font-size: 16px;
+  border-radius: 0;
+  border-bottom: 2px solid var(--main-color);
+  transition: all 0.3s;
+  margin-right: 20px;
+}
+
+.search .search__input:focus {
+  border-bottom: 2px solid #a125ff;
+}
+
+.search .search__btn {
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 6px;
+  width: 120px;
+  height: auto;
+  font-size: 16px;
+  transition: all .3s;
+}
+
+.search .search__btn:hover {
+  opacity: .9;
+}
+
+.word {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.word .word__searched {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.word__searched .word__sound {
+  background-color: transparent;
+}
+
+.word__searched .word__sound img {
+  width: 20px;
+  height: 20px;
+}
+
+.word .word__noun {
+  color: var(--gray-color);
+  margin: 1rem 0 2rem;
+}
+
+.word .word__definition {
+  font-size: 18px;
+  color: #555;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+@media screen and (max-width: 992px) {
+  .dictionary .container {
+    width: 80%;
+  }
+}
